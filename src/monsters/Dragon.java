@@ -6,6 +6,9 @@ import utils.Dice;
 public class Dragon extends Monster {
 	public Dragon(String name, String weapon) {
 		super(name, weapon);
+		setHp(HP);
+		setOffensive(OFFENSIVE);
+		
 	}
 
 	int HP = Dice.get(270, 330);

@@ -6,6 +6,8 @@ import utils.Dice;
 public class Oak extends Monster {
 	public Oak(String name, String weapon) {
 		super(name, weapon);
+		setHp(HP);
+		setOffensive(OFFENSIVE);
 	}
 
 	int HP = Dice.get(170, 230);

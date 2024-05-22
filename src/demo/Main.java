@@ -26,7 +26,7 @@ public class Main {
 		// 人間グループのリストを空で生成
 		List<Human> humans = new ArrayList<>();
 		
-		// 勇者、戦士、魔法使いを人間グループのリストに追加
+		// 勇者、戦士魔法使いを人間グループのリストに追加
 		humans.add(B);
 		humans.add(F);
 		humans.add(W);
@@ -61,15 +61,14 @@ public class Main {
 			System.out.println("\n[人間のターン！]\n");
 
 			// 人間グループから1人選択
-			choiceHuman(humans);
+			Human human1 = choiceHuman(humans);
 			
 			// モンスターグループから1人選択
-            choiceMonster(monsters);
+            Monster monster1 = choiceMonster(monsters);
             
 			// 選ばれた人間が、選ばれたモンスターを攻撃
-            Human.attack(monsters);
+            human1.attack(monster1);
             
-			
 			// モンスターのHPが0以下になれば、モンスターは倒れ、そのモンスターをモンスターグループから削除
 
 			// モンスターグループに誰もいなくなれば、人間グループの勝利
