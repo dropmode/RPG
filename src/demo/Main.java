@@ -3,11 +3,11 @@ package demo;
 import java.util.ArrayList;
 import java.util.List;
 
+import Humans.Brave;
+import Humans.Fighter;
+import Humans.Wizard;
 import bases.Human;
 import bases.Monster;
-import humans.Brave;
-import humans.Fighter;
-import humans.Wizard;
 import monsters.Dragon;
 import monsters.Oak;
 import monsters.Slime;
