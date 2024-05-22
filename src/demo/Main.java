@@ -99,6 +99,8 @@ public class Main {
 				System.out.println("★★ ==== 決着がついた！！ ==== ★★");
 				System.out.println();
 				System.out.println("#### 人間達は敗北した... ####");
+
+				break;
 			}
 
 			// 現在の各グループの状態を一覧表示
@@ -106,10 +108,10 @@ public class Main {
 
 			// ループ変数を1増やす
 			count++;
-
+		}
 			// 最後に各グループの状態を一覧表示してプログラム終了
 			showGroupInfos(humans, monsters);
-		}
+		
 	}
 
 	// 引数でもらった人間グループリストからランダムに1人を選択し、その結果を戻り値とするメソッド
