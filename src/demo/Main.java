@@ -61,11 +61,13 @@ public class Main {
 			System.out.println("\n[人間のターン！]\n");
 
 			// 人間グループから1人選択
-			choiceHuman(List<Human> humans);
+			choiceHuman(humans);
 			
 			// モンスターグループから1人選択
-            
+            choiceMonster(monsters);
 			// 選ばれた人間が、選ばれたモンスターを攻撃
+            
+            
 			
 			// モンスターのHPが0以下になれば、モンスターは倒れ、そのモンスターをモンスターグループから削除
 
