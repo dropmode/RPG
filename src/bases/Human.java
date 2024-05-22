@@ -24,7 +24,7 @@ public abstract class Human extends Living {
 		super.offensive--;
 		// コンソールにステータスを表示
 		System.out.println(
-				"「" + name + "」" + "が" + "「" + weapon + "」" + "で攻撃！" + "「" + target + "」" + "に" + dam + "のダメージを与えた。");
+				"「" + name + "」" + "が" + "「" + weapon + "」" + "で攻撃！" + "「" + target.getName() + "」" + "に" + dam + "のダメージを与えた。");
 		System.out.println("しかし自分の攻撃力も1減少した。");
 	}
 }
