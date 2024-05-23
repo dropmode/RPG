@@ -83,9 +83,9 @@ public class Main {
 			System.out.println("\n[モンスターのターン！]\n");
 
 			// 人間グループから1人選択
-			Human human = choiceHuman(humans);
+			human = choiceHuman(humans);
 			// モンスターグループから1人選択
-			Monster monster = choiceMonster(monsters);
+			monster = choiceMonster(monsters);
 			// 選ばれたモンスターが、選ばれた人間を攻撃
 			monster.attack(human);
 
