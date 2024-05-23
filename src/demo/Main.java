@@ -58,18 +58,18 @@ public class Main {
 			System.out.println("\n[人間のターン！]\n");
 
 			// 人間グループから1人選択
-			Human human1 = choiceHuman(humans);
+			Human human = choiceHuman(humans);
 
 			// モンスターグループから1人選択
-			Monster monster1 = choiceMonster(monsters);
+			Monster monster = choiceMonster(monsters);
 
 			// 選ばれた人間が、選ばれたモンスターを攻撃
-			human1.attack(monster1);
+			human.attack(monster);
 
 			// モンスターのHPが0以下になれば、モンスターは倒れ、そのモンスターをモンスターグループから削除
-			if (monster1.getHp() <= 0) {
-				monsters.remove(monster1);
-				System.out.println("★「" + monster1.getName() + "」は倒れた。");
+			if (monster.getHp() <= 0) {
+				monsters.remove(monster);
+				System.out.println("★「" + monster.getName() + "」は倒れた。");
 			}
 			// モンスターグループに誰もいなくなれば、人間グループの勝利
 			if (monsters.isEmpty()) {
@@ -83,16 +83,16 @@ public class Main {
 			System.out.println("\n[モンスターのターン！]\n");
 
 			// 人間グループから1人選択
-			Human human2 = choiceHuman(humans);
+			Human human = choiceHuman(humans);
 			// モンスターグループから1人選択
-			Monster monster2 = choiceMonster(monsters);
+			Monster monster = choiceMonster(monsters);
 			// 選ばれたモンスターが、選ばれた人間を攻撃
-			monster2.attack(human2);
+			monster.attack(human);
 
 			// 人間のHPが0以下になれば、人間は倒れ、その人間をモンスターグループから削除
-			if (human2.getHp() <= 0) {
-				humans.remove(human2);
-				System.out.println("★「" + human2.getName() + "」は倒れた。");
+			if (human.getHp() <= 0) {
+				humans.remove(human);
+				System.out.println("★「" + human.getName() + "」は倒れた。");
 			}
 			// 人間グループに誰もいなくなれば、人間グループの敗北
 			if (humans.isEmpty()) {
@@ -109,9 +109,9 @@ public class Main {
 			// ループ変数を1増やす
 			count++;
 		}
-			// 最後に各グループの状態を一覧表示してプログラム終了
-			showGroupInfos(humans, monsters);
-		
+		// 最後に各グループの状態を一覧表示してプログラム終了
+		showGroupInfos(humans, monsters);
+
 	}
 
 	// 引数でもらった人間グループリストからランダムに1人を選択し、その結果を戻り値とするメソッド
